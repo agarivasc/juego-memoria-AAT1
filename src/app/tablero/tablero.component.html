@@ -1,0 +1,9 @@
+<h1>Juego de Memoria de Perros</h1>
+<div class="board">
+  <button (click)="resetGame()">Reiniciar Juego</button>
+</div>
+<div class="board">
+    <app-cartas *ngFor="let card of cards" [card]="card" (click)="onCardClicked(card)"></app-cartas>
+  </div>
+   
+  

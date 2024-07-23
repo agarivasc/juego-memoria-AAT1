@@ -1,0 +1,96 @@
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+  margin-top: 100px;
+  margin-bottom: 70px;
+  color: #ff5733; /* Colorido */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #4CAF50; /* Verde */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animación */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+button:hover {
+  background-color: #45a049; /* Verde oscuro al pasar el mouse */
+  transform: scale(1.1); /* Efecto de zoom */
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.timer {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Fijo en 4 columnas */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 600px; /* Ajusta según sea necesario */
+  margin: 0 auto; /* Centrando el tablero */
+  background-color: #f1f1f1; /* Fondo claro */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.card {
+  background-color: #fff; /* Fondo de las cartas */
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra de las cartas */
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Animación */
+}
+
+.card.revealed {
+  background-color: #ffe680; /* Amarillo claro para cartas reveladas */
+}
+
+.card.matched {
+  background-color: #8BC34A; /* Verde para cartas emparejadas */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  .board {
+    padding: 10px;
+    max-width: 100%; /* Ancho máximo al 100% en pantallas pequeñas */
+  }
+
+  .card {
+    border: 1px solid #ccc;
+  }
+}
